@@ -1,0 +1,102 @@
+<!--
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Locator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      gmpx-store-locator {
+        width: 100%;
+        height: 100%;
+
+        /* These parameters customize the appearance of Locator Plus. See the documentation at
+           https://github.com/googlemaps/extended-component-library/blob/main/src/store_locator/README.md
+           for more information. */
+        --gmpx-color-surface: #fff;
+        --gmpx-color-on-surface: #212121;
+        --gmpx-color-on-surface-variant: #757575;
+        --gmpx-color-primary: #1967d2;
+        --gmpx-color-outline: #e0e0e0;
+        --gmpx-fixed-panel-width-row-layout: 28.5em;
+        --gmpx-fixed-panel-height-column-layout: 65%;
+        --gmpx-font-family-base: "Roboto", sans-serif;
+        --gmpx-font-family-headings: "Roboto", sans-serif;
+        --gmpx-font-size-base: 0.875rem;
+        --gmpx-hours-color-open: #188038;
+        --gmpx-hours-color-closed: #d50000;
+        --gmpx-rating-color: #ffb300;
+        --gmpx-rating-color-empty: #e0e0e0;
+      }
+    </style>
+    <script>
+      const CONFIGURATION = {
+        "locations": [
+          {"title":"Heather\u0027s","address1":"5201 Chicago Ave","address2":"Minneapolis, MN 55417, USA","coords":{"lat":44.90879948951631,"lng":-93.26241313558197},"placeId":"ChIJuaXiInon9ocRYSftN4vWzXc","actions":[{"label":"Order online","defaultUrl":"https://www.google.com/viewer/chooseprovider?mid\u003d/g/11hf86l6mj"},{"label":"Reserve a table","defaultUrl":"https://www.google.com/maps/reserve/v/dine/c/_6jjBw4kYoI?source\u003dgmpqb"}]},
+          {"title":"Pizzeria Lola","address1":"5557 Xerxes Ave S","address2":"Minneapolis, MN 55410, USA","coords":{"lat":44.90194469002924,"lng":-93.31865827976225},"placeId":"ChIJEWROdcIm9ocRbZQ9Buq-07w","actions":[{"label":"Order online","defaultUrl":"https://www.google.com/viewer/chooseprovider?mid\u003d/g/1tj5r90_"},{"label":"Reserve a table","defaultUrl":"https://www.google.com/maps/reserve/v/dine/c/XwS1AjtT3As?source\u003dgmpqb"}]},
+          {"title":"Rustic Roots Winery","address1":"20168 St Croix Trail N","address2":"Scandia, MN 55073, USA","coords":{"lat":45.24257691379783,"lng":-92.77717766441802},"placeId":"ChIJr1tnsqO_slIR6g8JzaIBDhU","actions":[{"label":"Reserve a table","defaultUrl":"https://www.google.com/maps/reserve/v/dine/c/Za6Iqd8kmFg?source\u003dgmpqb"}]},
+          {"title":"Uncommon Grounds Coffeehouse","address1":"2809 Hennepin Ave","address2":"Minneapolis, MN 55408, USA","coords":{"lat":44.95164599975341,"lng":-93.29798429325409},"placeId":"ChIJsQcQF4An9ocRLmPgNGnfhTE"},
+          {"title":"Backstory Coffee Roasters - North Loop","address1":"528 N Washington Ave","address2":"Minneapolis, MN 55401, USA","coords":{"lat":44.98708902753303,"lng":-93.27516060674589},"placeId":"ChIJyw5t2Ugzs1IRzTuOsu2vaMM"},
+          {"title":"Bar La Grassa","address1":"800 N Washington Ave","address2":"Minneapolis, MN 55401, USA","coords":{"lat":44.989346554190796,"lng":-93.27875679325409},"placeId":"ChIJBcDbP4oys1IRg97QGrkjtH8"},
+          {"title":"Parlour","address1":"730 N Washington Ave","address2":"Minneapolis, MN 55401, USA","coords":{"lat":44.98889256699713,"lng":-93.27836486441805},"placeId":"ChIJ6WZ_Jooys1IRr9VAAy6FY-8","actions":[{"label":"Order online","defaultUrl":"https://www.google.com/viewer/chooseprovider?mid\u003d/g/11c5zxq28n"}]},
+          {"title":"Lake Nokomis","address1":"Lake Nokomis","address2":"Minneapolis, MN 55417, USA","coords":{"lat":44.90869058813784,"lng":-93.24201593558196},"placeId":"ChIJ7zAFwo0o9ocRblSypcVynJA"},
+          {"title":"Lake Harriet","address1":"Lake Harriet","address2":"Minneapolis, MN 55419, USA","coords":{"lat":44.92203756753598,"lng":-93.30616616441803},"placeId":"ChIJP1euTAQn9ocRmU08cPsPN3E"},
+          {"title":"Minnehaha Falls","address1":"Minnehaha Falls","address2":"Minneapolis, MN 55417, USA","coords":{"lat":44.915391481050705,"lng":-93.21102742209015},"placeId":"ChIJ7zhgTAYp9ocRedVNQP6GxbA"},
+          {"title":"The Painted Turtle","address1":"4955 W Lake Nokomis Pkwy","address2":"Minneapolis, MN 55417, USA","coords":{"lat":44.911603173892736,"lng":-93.24315679325407},"placeId":"ChIJJ0T6K1wp9ocRuDsHzMP8rhg"},
+          {"title":"Bread \u0026 Pickle","address1":"4135 W Lake Harriet Pkwy","address2":"Minneapolis, MN 55410, USA","coords":{"lat":44.92798455564468,"lng":-93.30826339325407},"placeId":"ChIJtbFBgBon9ocRKgD49VeY9Qc","actions":[{"label":"Order online","defaultUrl":"https://www.google.com/viewer/chooseprovider?mid\u003d/g/1hf6jm6mv"}]},
+          {"title":"Sea Salt","address1":"4825 Minnehaha Ave","address2":"Minneapolis, MN 55417, USA","coords":{"lat":44.91618247527764,"lng":-93.21080379140167},"placeId":"ChIJe1KszQ8p9ocRGU32a3jajkg","actions":[{"label":"Order online","defaultUrl":"https://www.google.com/viewer/chooseprovider?mid\u003d/g/1tfd7jvc"}]},
+          {"title":"Willow River State Park","address1":"1034 Co Hwy A","address2":"Hudson, WI 54016, USA","coords":{"lat":45.01662398964341,"lng":-92.68768576441802},"placeId":"ChIJ03g02LuzslIROsbMF1lufn8"},
+          {"title":"Summit Avenue","address1":"Summit Ave","address2":"St Paul, MN, USA","coords":{"lat":44.94160805914715,"lng":-93.1516841067459},"placeId":"EhxTdW1taXQgQXZlLCBTdCBQYXVsLCBNTiwgVVNBIi4qLAoUChIJe5AfIGwq9ocRawfQJkIk61MSFAoSCZ836eTO1LJSESku2j_SkXLI"},
+          {"title":"Grand Avenue","address1":"Grand Ave","address2":"St Paul, MN, USA","coords":{"lat":44.940120243621834,"lng":-93.15630265092624},"placeId":"EhtHcmFuZCBBdmUsIFN0IFBhdWwsIE1OLCBVU0EiLiosChQKEgnrgvldaCr2hxGcMgjETpqD_xIUChIJnzfp5M7UslIRKS7aP9KRcsg"},
+          {"title":"Stillwater","address1":"Stillwater","address2":"MN 55082, USA","coords":{"lat":45.056087369090136,"lng":-92.80881747790983},"placeId":"ChIJt0_FFvIx9ocRj-jY6s2OuUs"},
+          {"title":"Taylors Falls","address1":"Taylors Falls","address2":"MN 55084, USA","coords":{"lat":45.40199659629775,"lng":-92.65238092023773},"placeId":"ChIJtXuFXmKOslIRjcOeHjE_vss"},
+          {"title":"Walker Art Center","address1":"725 Vineland Pl","address2":"Minneapolis, MN 55403, USA","coords":{"lat":44.968204925164095,"lng":-93.28865476441801},"placeId":"ChIJkXzI4m4rs1IRkr3SSCf_DcI"},
+          {"title":"Minneapolis Institute of Art","address1":"2400 3rd Ave S","address2":"Minneapolis, MN 55404, USA","coords":{"lat":44.95865953021757,"lng":-93.27320190674592},"placeId":"ChIJT0k6WbEys1IRpnx9LgDjLMU"},
+          {"title":"Hunt and Gather","address1":"4946 Xerxes Ave S","address2":"Minneapolis, MN 55410, USA","coords":{"lat":44.91300744887673,"lng":-93.31914444907378},"placeId":"ChIJI9Uz6oAn9ocRYeHJ9U3sYT4"},
+          {"title":"Mall of America®","address1":"60 E Broadway","address2":"Bloomington, MN 55425, USA","coords":{"lat":44.85494876181893,"lng":-93.24219870674591},"placeId":"ChIJLWE8OWwv9ocRayh4boDxxrM"},
+          {"title":"LoLo American Kitchen and Craft Bar","address1":"233 S Main St","address2":"Stillwater, MN 55082, USA","coords":{"lat":45.05522611995246,"lng":-92.80515764907378},"placeId":"ChIJ0Vyds-rJslIRRjLx82vlW14"}
+        ],
+        "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17,"mapId":""},
+        "mapsApiKey": "AIzaSyDHykOT9D210rIWMUQzkMUjdEBVTyZZCVA",
+        "capabilities": {"input":true,"autocomplete":true,"directions":false,"distanceMatrix":true,"details":false,"actions":true}
+      };
+
+    </script>
+    <script type="module">
+      document.addEventListener('DOMContentLoaded', async () => {
+        await customElements.whenDefined('gmpx-store-locator');
+        const locator = document.querySelector('gmpx-store-locator');
+        locator.configureFromQuickBuilder(CONFIGURATION);
+      });
+    </script>
+  </head>
+  <body>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/@googlemaps/extended-component-library/0.6.11/index.min.js"></script>
+
+    <!-- Uses components from the Extended Component Library; see
+         https://github.com/googlemaps/extended-component-library for more information
+         on these HTML tags and how to configure them. -->
+    <gmpx-api-loader key="AIzaSyDHykOT9D210rIWMUQzkMUjdEBVTyZZCVA" solution-channel="GMP_QB_locatorplus_v11_cABDF"></gmpx-api-loader>
+    <gmpx-store-locator map-id="DEMO_MAP_ID"></gmpx-store-locator>
+  </body>
+</html>
